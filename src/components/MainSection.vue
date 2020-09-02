@@ -1,10 +1,22 @@
 <template>
-  <div></div>
+  <div>
+    <div>
+      <SearchBox />
+      <FilterBox />
+    </div>
+    <div>countries list here</div>
+  </div>
 </template>
 
 <script>
+import SearchBox from "@/components/SearchBox";
+import FilterBox from "@/components/FilterBox";
 export default {
-  name: "MainSectionComponent"
+  name: "MainSectionComponent",
+  components: {
+    SearchBox,
+    FilterBox
+  }
 };
 </script>
 

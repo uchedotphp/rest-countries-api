@@ -1,5 +1,14 @@
 <template>
-  <div></div>
+  <div>
+    Fliter by Region
+    <ul>
+      <li>Africa</li>
+      <li>America</li>
+      <li>Asia</li>
+      <li>Europe</li>
+      <li>Oceania</li>
+    </ul>
+  </div>
 </template>
 
 <script>

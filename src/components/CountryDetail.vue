@@ -1,5 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <p>Where in the world?</p>
+
+    <button>
+      //TODO: add icon here
+      Dark Mode
+    </button>
+  </div>
 </template>
 
 <script>
