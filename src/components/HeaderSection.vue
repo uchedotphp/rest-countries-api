@@ -1,7 +1,8 @@
 <template>
-  <div class="flex mb-4">
-    <div class="w-1/2 h-12"></div>
-    <div class="w-1/2 h-12"></div>
+  <div class>
+    <h1>Where in the world?</h1>
+
+    <button>Dark Mode</button>
   </div>
 </template>
 

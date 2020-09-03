@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderSection />
     <div>
       <SearchBox />
       <FilterBox />
@@ -9,11 +10,13 @@
 </template>
 
 <script>
+import HeaderSection from "@/components/HeaderSection";
 import SearchBox from "@/components/SearchBox";
 import FilterBox from "@/components/FilterBox";
 export default {
   name: "MainSectionComponent",
   components: {
+    HeaderSection,
     SearchBox,
     FilterBox
   }
