@@ -4,7 +4,7 @@
     <div class="px-5 py-10 phones:max-w-screen-desktops mx-auto">
       <SearchBoxes />
     </div>
-    <div>countries list here</div>
+    <!-- <div>countries list here</div> -->
   </div>
 </template>
 

@@ -6,7 +6,7 @@
       <h5 class="phones:text-4xl text-2xl font-extrabold">Where in the world?</h5>
 
       <button
-        class="bg-darkBlueColor hover:bg-darkBlueColor text-xl phones:text-2xl text-whiteColor font-semibold inline-flex items-center"
+        class="bg-darkBlueColor hover:bg-darkBlueColor text-xl phones:text-2xl text-whiteColor font-semibold inline-flex items-center focus:outline-none focus:border-darkBlueColor"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 mr-3" viewBox="0 0 512 512">
           <title>ionicons-v5-j</title>
