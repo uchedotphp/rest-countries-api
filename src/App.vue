@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-red-500 phones:bg-green-500">
     <img src="./assets/logo.png" />
     <div>
       <p>
@@ -19,14 +19,25 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,800;1,600&display=swap");
+// site font
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
+// site colors
 $dark-blue: hsl(209, 23%, 22%);
 $very-dark-blue-dark: hsl(207, 26%, 17%);
 $very-dark-blue-light: hsl(200, 15%, 8%);
 $dark-gray: hsl(0, 0%, 52%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
+
+// site font sizes
+$homepageFontSize: 14px;
+$detailsPageFontSize: 16px;
+
+:root {
+  font-size: $homepageFontSize;
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
