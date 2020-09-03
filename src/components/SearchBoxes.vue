@@ -1,8 +1,8 @@
 <template>
-  <div class="grid grid-cols-1 phones:grid-cols-2 justify-between">
-    <div class>
+  <div class="grid grid-cols-1 phones:grid-cols-2">
+    <div>
       <input
-        class="font-semibold shadow-md rounded-lg px-12 w-full h-20 bg-darkBlueColor text-whiteColor focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor placeholder-whiteColor text-xl border-darkBlueColor"
+        class="font-semibold shadow-md rounded-lg px-12 w-full phones:w-9/12 h-20 bg-darkBlueColor text-whiteColor focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor placeholder-whiteColor text-xl border-darkBlueColor"
         placeholder="Search for a country..."
       />
     </div>
@@ -10,7 +10,7 @@
     <div class="relative">
       <button
         @click.prevent="toggleFilter"
-        class="mt-16 phones:mt-0 bg-darkBlueColor hover:bg-darkBlueColor text-lg text-whiteColor font-semibold py-6 px-12 rounded-lg inline-flex items-center justify-between w-8/12 focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
+        class="mt-16 h-20 phones:mt-0 bg-darkBlueColor hover:bg-darkBlueColor text-lg text-whiteColor font-semibold py-6 px-12 rounded-lg inline-flex items-center justify-between w-8/12 phones:w-4/12 focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
       >
         <span>Filter by Region</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5" viewBox="0 0 512 512">
@@ -23,7 +23,7 @@
       </button>
 
       <div
-        class="w-8/12 absolute bg-darkBlueColor mt-2 rounded-lg text-lg font-semibold px-12 py-6 z-10"
+        class="w-8/12 absolute bg-darkBlueColor mt-2 rounded-lg text-lg font-semibold px-12 py-6 z-10 phones:w-4/12"
         v-bind:class="[showFilter ? 'block' : 'hidden']"
       >
         <a class="block py-2 text-xl" href="#">Africa</a>
