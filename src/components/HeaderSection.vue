@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div class="flex mb-4">
+    <div class="w-1/2 h-12"></div>
+    <div class="w-1/2 h-12"></div>
+  </div>
 </template>
 
 <script>
