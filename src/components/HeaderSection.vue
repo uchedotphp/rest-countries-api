@@ -1,8 +1,10 @@
 <template>
-  <div class>
-    <h1>Where in the world?</h1>
+  <div class="bg-darkBlueColor">
+    <div class="phones:max-w-screen-desktops flex justify-between mx-auto px-5 py-10">
+      <h4>Where in the world?</h4>
 
-    <button>Dark Mode</button>
+      <button>Dark Mode</button>
+    </div>
   </div>
 </template>
 

@@ -33,7 +33,6 @@ $detailsPageFontSize: 16px;
 }
 
 body {
-  // background: $dark-blue;
   font-family: "Nunito Sans", sans-serif;
 }
 </style>
