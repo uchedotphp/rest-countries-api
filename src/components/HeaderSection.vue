@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-darkBlueColor shadow-md">
+  <div class="bg-darkBlueColor shadow-md tablets:px-20 desktops:px-0">
     <div class="container flex items-baseline justify-between mx-auto px-5 py-10">
       <h5 class="phones:text-4xl text-2xl font-extrabold">Where in the world?</h5>
 

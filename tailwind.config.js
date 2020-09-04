@@ -5,8 +5,14 @@ module.exports = {
       phones: "640px",
       // => @media (min-width: 640px) { ... }
 
-      desktops: "1440px",
+      tablets: "768px",
       // => @media (min-width: 1024px) { ... }
+
+      desktops: "1440px",
+      // => @media (min-width: 1440px) { ... }
+
+      bigDesktops: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
     colors: {
       darkBlueColor: "hsl(209, 23%, 22%)",
