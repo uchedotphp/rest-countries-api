@@ -1,15 +1,23 @@
 <template>
-  <div id="app" class="bg-red-500 phones:bg-green-500">
-    <MainSection />
+  <div id="app" class="">
+    <HeaderSection />
+    <div
+      class="px-5 py-16 phones:px-0 container tablets:px-20 desktops:px-0 mx-auto"
+    >
+      <SearchBoxes />
+    </div>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MainSection from "@/components/MainSection";
+import HeaderSection from "@/components/HeaderSection";
+import SearchBoxes from "@/components/SearchBoxes";
 export default {
   name: "app",
   components: {
-    MainSection
+    HeaderSection,
+    SearchBoxes,
   }
 };
 </script>

@@ -11,7 +11,7 @@ module.exports = {
       desktops: "1440px",
       // => @media (min-width: 1440px) { ... }
 
-      bigDesktops: "1280px",
+      bigDesktops: "1280px"
       // => @media (min-width: 1280px) { ... }
     },
     colors: {
@@ -20,10 +20,10 @@ module.exports = {
       veryDarkBlueLightColor: "hsl(200, 15%, 8%)",
       darkGrayColor: "hsl(0, 0%, 52%)",
       veryLightGrayColor: "hsl(0, 0%, 98%)",
-      whiteColor: "hsl(0, 0%, 100%)",
+      whiteColor: "hsl(0, 0%, 100%)"
     },
-    extend: {},
+    extend: {}
   },
   variants: {},
-  plugins: [],
+  plugins: []
 };
