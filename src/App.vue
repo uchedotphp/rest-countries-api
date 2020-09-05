@@ -1,23 +1,18 @@
 <template>
   <div id="app" class="">
-    <HeaderSection />
-    <div
-      class="px-5 py-16 phones:px-0 container tablets:px-20 desktops:px-0 mx-auto"
-    >
-      <SearchBoxes />
-    </div>
-      <router-view></router-view>
+
+  <HeaderSection />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HeaderSection from "@/components/HeaderSection";
-import SearchBoxes from "@/components/SearchBoxes";
 export default {
   name: "app",
   components: {
-    HeaderSection,
-    SearchBoxes,
+    HeaderSection
+    // SearchBoxes,
   }
 };
 </script>
