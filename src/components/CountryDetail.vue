@@ -89,17 +89,13 @@ export default {
     name: String
   },
   mounted() {
-    console.log(this.name);
-    console.log(this.$route.params)
     return axios.get("https://restcountries.eu/rest/v2/all").then(
       ({data}) =>{
-        console.log(data);
         const detail = data.find(
           countryData =>{
             return countryData.alpha3Code === this.name
           }
         );
-        console.log(detail);
         this.countryDetails = detail
       }
     ).catch( err => {

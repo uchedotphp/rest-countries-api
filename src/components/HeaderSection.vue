@@ -3,9 +3,9 @@
     <div
       class="container flex items-baseline justify-between mx-auto px-5 py-10"
     >
-      <h5 class="phones:text-4xl text-2xl font-extrabold">
+    <router-link to="/" tag="h5" class="phones:text-4xl text-2xl font-extrabold">
         Where in the world?
-      </h5>
+    </router-link>
 
       <button
         class="bg-darkBlueColor hover:bg-darkBlueColor text-xl phones:text-2xl text-whiteColor font-semibold inline-flex items-center focus:outline-none focus:border-darkBlueColor"

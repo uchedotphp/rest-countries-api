@@ -21,9 +21,7 @@
       </router-link>
         <div class="px-6 py-8 bg-darkBlueColor">
           <div class="font-extrabold text-2xl mb-2 py-5">
-            <!-- <router-link :to="{name: 'countryDetails',id: country.id}"> -->
               {{ country.name }}
-            <!-- </router-link> -->
           </div>
           <p class="text-xl">
             <span class="font-semibold">Population:</span>
@@ -39,7 +37,6 @@
           </p>
         </div>
       </div>
-    <!-- </router-link> -->
     </div>
 </div>
 </template>
