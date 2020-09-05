@@ -46,6 +46,7 @@
 
 <script>
 import axios from "axios";
+import Nprogress from 'nprogress'
 import SearchBoxes from "@/components/SearchBoxes";
 export default {
   name: "MainSectionComponent",
@@ -59,6 +60,17 @@ export default {
     };
   },
   created() {
+    axios.interceptors.request.use(config =>{
+      Nprogress.start()
+      return config
+    })
+
+    axios.interceptors.response.use(response =>{
+      Nprogress.done()
+      return response
+    })
+
+
     return axios
       .get("https://restcountries.eu/rest/v2/all")
       .then(({ data }) => {
