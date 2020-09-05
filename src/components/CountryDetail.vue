@@ -62,7 +62,7 @@
           </p>
         </div>
 
-        <div class="mt-10">
+        <div class="mt-10" v-if="countryDetails.borders.length > 0">
           <div class="text-2xl py-2">
             <span class="font-semibold">Border Countries:</span>
             <div class="grid grid-cols-3 gap-4 mt-6">
