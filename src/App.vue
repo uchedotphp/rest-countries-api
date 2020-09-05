@@ -2,7 +2,7 @@
   <div id="app" class="">
 
   <HeaderSection />
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 

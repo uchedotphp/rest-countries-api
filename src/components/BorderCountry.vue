@@ -66,7 +66,7 @@
           <div class="text-2xl py-2">
             <span class="font-semibold">Border Countries:</span>
             <div class="grid grid-cols-3 gap-4 mt-6">
-              <button @click="$router.push({name: 'countryDetails', params:{ name: borders }})" class="bg-darkBlueColor py-2 text-center shadow-md px-4 rounded-sm" v-for="(borders, index) in countryDetails.borders" :key="index">
+              <button @click="$router.push({name: 'borderCountry', params:{name:borders}})" class="bg-darkBlueColor py-2 text-center shadow-md px-4 rounded-sm" v-for="(borders, index) in countryDetails.borders" :key="index">
               {{borders}}
             </button>
             </div>
@@ -79,7 +79,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: "CountryDetailComponent",
+  name: "BorderCountryComponent",
   data() {
     return {
       countryDetails: {}
@@ -96,7 +96,7 @@ export default {
         console.log(data);
         const detail = data.find(
           countryData =>{
-            return countryData.alpha3Code === this.name
+            return countryData.name === this.name
           }
         );
         console.log(detail);

@@ -12,7 +12,7 @@
         v-for="country in countries"
         :key="country.name"
       >
-      <router-link :to="{ name: 'countryDetails', params: { name: country.name } }">
+      <router-link :to="{ name: 'countryDetails', params: { name: country.alpha3Code } }">
         <img
           class="w-full object-cover h-56"
           :src="country.flag"
@@ -75,6 +75,7 @@ export default {
       .get("https://restcountries.eu/rest/v2/all")
       .then(({ data }) => {
         this.countries = data;
+        // console.log(data.alpha3Code)
       })
       .catch(error => {
         if (error.response) {
