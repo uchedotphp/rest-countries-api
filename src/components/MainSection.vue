@@ -18,7 +18,7 @@
       >
       <router-link :to="{ name: 'countryDetails', params: { name: country.name } }">
         <img
-          class="w-full object-cover h-48"
+          class="w-full object-cover h-56"
           :src="country.flag"
           :alt="[country.name]"
         />
