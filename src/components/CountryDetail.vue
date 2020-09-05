@@ -1,7 +1,7 @@
 <template>
   <div class="mb-16 mt-16 container mx-auto w-10/12 phones:w-auto">
     <div>
-      <button @click="$router.push('/')" class="shadow-lg bg-darkBlueColor hover:bg-darkBlueColor text-2xl text-whiteColor py-2 px-8 rounded-sm inline-flex items-center focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
+      <button @click="$router.go(-1)" class="shadow-lg bg-darkBlueColor hover:bg-darkBlueColor text-2xl text-whiteColor py-2 px-8 rounded-sm inline-flex items-center focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
       >
       <svg class="mr-4" xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'><title>ionicons-v5-a</title><polyline points='244 400 100 256 244 112' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/><line x1='120' y1='256' x2='412' y2='256' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/></svg>
         <span>Back</span>

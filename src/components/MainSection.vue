@@ -8,7 +8,7 @@
     <div class="grid grid-cols-1 phones:grid-cols-4 tablets:px-20 desktops:px-0 tablets:grid-cols-2 desktops:grid-cols-4 gap-20 mb-20 container mx-auto w-9/12 phones:w-auto container"
     >
       <div v-loading="loading" element-loading-text="Loading..."
-        class="rounded overflow-hidden shadow-lg"
+        class="rounded overflow-hidden shadow-lg hover:shadow-xl"
         v-for="country in countries"
         :key="country.name"
       >
