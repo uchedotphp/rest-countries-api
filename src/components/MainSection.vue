@@ -60,7 +60,7 @@ export default {
   },
   created() {
     return axios
-      .get("https://restcountries.eu/rest/v2/all?_page=1&_limit=20")
+      .get("https://restcountries.eu/rest/v2/all")
       .then(({ data }) => {
         this.countries = data;
       })
