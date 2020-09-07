@@ -1,7 +1,7 @@
 # rest-countries-api
 
 __Description:__
-A project challenge from Frontend Mentor. Click [Here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) for [link](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) to the challenge's page. ![Frontend Mentor](https://www.frontendmentor.io/static/images/logo-desktop.svg)
+A project challenge from ![Frontend Mentor](https://www.frontendmentor.io/static/images/logo-desktop.svg) . Click [Here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) for [link](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) to the challenge's page.
 
 Users should are able to:
 > * See all countries from the API on the homepage.
