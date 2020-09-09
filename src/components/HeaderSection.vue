@@ -123,6 +123,7 @@
 </template>
 
 <script>
+import EventBus from "./../event-bus";
 export default {
   name: "HeaderSectionComponent",
   data() {
@@ -140,7 +141,7 @@ export default {
         this.light = true;
         this.modeText = "Dark Mode";
       }
-      this.$emit("currentMode", this.light);
+      EventBus.$emit("currentMode", this.light);
     },
   },
 };

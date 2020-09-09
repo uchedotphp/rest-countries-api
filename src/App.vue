@@ -3,12 +3,13 @@
     id="app"
     :class="[mode ? 'bg-veryLightGrayColor' : 'bg-veryDarkBlueDarkColor']"
   >
-    <HeaderSection v-on:currentMode="receivedMode" />
+    <HeaderSection />
     <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 <script>
+import EventBus from "./event-bus";
 import HeaderSection from "@/components/HeaderSection";
 export default {
   name: "app",
@@ -21,10 +22,16 @@ export default {
       mode: true,
     };
   },
-  methods: {
-    receivedMode(value) {
+  mounted() {
+    EventBus.$on("currentMode", (value) => {
       this.mode = value;
-    },
+    });
+  },
+  methods: {
+    // receivedMode(value) {
+    //   this.mode = value;
+    // },
+    // EventBus.$on(){}
   },
 };
 </script>
