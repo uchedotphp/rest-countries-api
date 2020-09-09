@@ -1,7 +1,6 @@
 <template>
-  <div id="app" class="">
-
-  <HeaderSection />
+  <div id="app">
+    <HeaderSection />
     <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
@@ -11,9 +10,9 @@ import HeaderSection from "@/components/HeaderSection";
 export default {
   name: "app",
   components: {
-    HeaderSection
+    HeaderSection,
     // SearchBoxes,
-  }
+  },
 };
 </script>
 

@@ -1,5 +1,7 @@
 <template>
-  <div class="mb-16 mt-16 container mx-auto w-10/12 phones:w-auto">
+  <div
+    class="mb-16 mt-16 container mx-auto w-10/12 phones:w-auto tablets:mx-32"
+  >
     <div>
       <button
         @click="$router.go(-1)"
@@ -28,7 +30,7 @@
         <span>Back</span>
       </button>
 
-      <div class="tablets:grid tablets:grid-cols-2 tablets:gap-x-64">
+      <div class="tablets:grid tablets:grid-cols-2 tablets:gap-x-48">
         <div class="overflow-hidden">
           <img
             class="w-full object-cover h-full my-20"
