@@ -3,7 +3,7 @@
     <div>
       <input
         v-model="search"
-        class="font-semibold shadow-md rounded-lg px-12 w-full tablets:w-9/12 h-20 bg-darkBlueColor text-whiteColor focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor placeholder-whiteColor text-xl border-darkBlueColor"
+        class="font-semibold shadow-md rounded-lg px-12 w-full tablets:w-9/12 h-20 bg-darkBlueColor focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor placeholder-whiteColor text-xl border-darkBlueColor"
         placeholder="Search for a country..."
       />
     </div>
@@ -11,7 +11,7 @@
     <div class="relative desktops:flex justify-end">
       <button
         @click.prevent="toggleFilter"
-        class="mt-16 h-20 desktops:mt-0 bg-darkBlueColor hover:bg-darkBlueColor text-lg text-whiteColor font-semibold py-6 px-12 rounded-lg inline-flex items-center justify-between w-8/12 phones:w-4/12 focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
+        class="mt-16 h-20 desktops:mt-0 bg-darkBlueColor hover:bg-darkBlueColor text-lg font-semibold py-6 px-12 rounded-lg inline-flex items-center justify-between w-8/12 phones:w-4/12 focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
       >
         <span>Filter by Region</span>
         <svg
@@ -38,10 +38,21 @@
         <a class="block py-2 text-xl" href="#">Oceania</a>
       </div>
     </div>
+
+    <!-- <select
+      v-model="selected"
+      class="justify-end bg-darkBlueColor desktops:flex"
+    >
+      <option disabled value="">Please select one</option>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select> -->
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "SearchBoxesComponent",
   data() {
@@ -50,14 +61,36 @@ export default {
       showFilter: false,
     };
   },
+  created() {
+    return axios
+      .get("https://restcountries.eu/rest/v2/region/europe")
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message);
+        }
+        console.log(error.config);
+      });
+  },
   methods: {
     toggleFilter() {
       this.showFilter = this.showFilter ? false : true;
     },
-    // searchInput() {
-    //   console.log(this.search);
-    //   this.$emit("searchedValue", this.search);
-    // },
+    filterRegion() {},
   },
   watch: {
     search() {

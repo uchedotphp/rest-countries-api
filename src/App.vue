@@ -1,6 +1,9 @@
 <template>
-  <div id="app">
-    <HeaderSection />
+  <div
+    id="app"
+    :class="[mode ? 'bg-veryLightGrayColor' : 'bg-veryDarkBlueDarkColor']"
+  >
+    <HeaderSection v-on:currentMode="receivedMode" />
     <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
@@ -12,6 +15,16 @@ export default {
   components: {
     HeaderSection,
     // SearchBoxes,
+  },
+  data() {
+    return {
+      mode: true,
+    };
+  },
+  methods: {
+    receivedMode(value) {
+      this.mode = value;
+    },
   },
 };
 </script>
@@ -32,6 +45,14 @@ $detailsPageFontSize: 16px;
 * {
   margin: 0;
   padding: 0;
+}
+
+.app {
+  color: hsl(0, 0%, 100%);
+}
+
+.light {
+  color: hsl(200, 15%, 8%);
 }
 
 body {

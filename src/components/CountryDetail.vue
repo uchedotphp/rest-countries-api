@@ -5,7 +5,7 @@
     <div>
       <button
         @click="$router.go(-1)"
-        class="shadow-lg bg-darkBlueColor hover:bg-darkBlueColor text-2xl text-whiteColor py-2 px-8 rounded-sm inline-flex items-center focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
+        class="shadow-lg bg-darkBlueColor hover:bg-darkBlueColor text-2xl py-2 px-8 rounded-sm inline-flex items-center focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
       >
         <svg
           class="mr-4"
