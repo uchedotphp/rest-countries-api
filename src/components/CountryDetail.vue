@@ -1,14 +1,59 @@
 <template>
   <div
-    class="mb-16 mt-16 container mx-auto w-10/12 phones:w-auto tablets:mx-32"
+    :class="[
+      'mb-16',
+      'mt-16',
+      'container',
+      'mx-auto',
+      'w-10/12',
+      'phones:w-auto',
+      'tablets:mx-32',
+      mode ? 'text-veryDarkBlueDarkColor' : 'text-whiteColor',
+    ]"
   >
     <div>
       <button
         @click="$router.go(-1)"
-        class="shadow-lg bg-darkBlueColor hover:bg-darkBlueColor text-2xl py-2 px-8 rounded-sm inline-flex items-center focus:bg-darkBlueColor focus:outline-none focus:border-darkBlueColor"
+        :class="[
+          'shadow-lg',
+          mode ? 'bg-veryLightGrayColor' : 'bg-darkBlueColor',
+          'hover:bg-darkBlueColor',
+          'text-2xl',
+          'py-2',
+          'px-8',
+          'rounded-sm',
+          'inline-flex',
+          'items-center',
+          'focus:bg-darkBlueColor',
+          'focus:outline-none',
+          'focus:border-darkBlueColor',
+        ]"
       >
         <svg
-          class="mr-4"
+          v-if="mode"
+          :class="['mr-4']"
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 512 512"
+        >
+          <title>ionicons-v5-a</title>
+          <polyline
+            points="244 400 100 256 244 112"
+            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"
+          />
+          <line
+            x1="120"
+            y1="256"
+            x2="412"
+            y2="256"
+            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"
+          />
+        </svg>
+
+        <svg
+          v-else
+          :class="['mr-4']"
           xmlns="http://www.w3.org/2000/svg"
           width="22"
           height="22"
@@ -99,7 +144,14 @@
                       params: { name: borders },
                     })
                   "
-                  class="bg-darkBlueColor py-2 text-center shadow-md px-4 rounded-sm"
+                  :class="[
+                    mode ? 'bg-veryLightGrayColor' : 'bg-darkBlueColor',
+                    'py-2',
+                    'text-center',
+                    'shadow-md',
+                    'px-4',
+                    'rounded-sm',
+                  ]"
                   v-for="(borders, index) in countryDetails.borders"
                   :key="index"
                 >
@@ -116,10 +168,12 @@
 
 <script>
 import axios from "axios";
+import EventBus from "./../event-bus";
 export default {
   name: "CountryDetailComponent",
   data() {
     return {
+      mode: true,
       countryDetails: {},
     };
   },
@@ -127,6 +181,10 @@ export default {
     name: String,
   },
   mounted() {
+    EventBus.$on("currentMode", (value) => {
+      this.mode = value;
+    });
+
     return axios
       .get("https://restcountries.eu/rest/v2/all")
       .then(({ data }) => {
