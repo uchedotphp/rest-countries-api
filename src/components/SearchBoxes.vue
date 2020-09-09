@@ -47,17 +47,24 @@ export default {
   data() {
     return {
       search: "",
-      showFilter: false
+      showFilter: false,
     };
   },
   methods: {
     toggleFilter() {
       this.showFilter = this.showFilter ? false : true;
-    }
+    },
+    // searchInput() {
+    //   console.log(this.search);
+    //   this.$emit("searchedValue", this.search);
+    // },
   },
-  computed: {
-    // search() {}
-  }
+  watch: {
+    search() {
+      console.log(this.search);
+      this.$emit("searchedValue", this.search);
+    },
+  },
 };
 </script>
 
