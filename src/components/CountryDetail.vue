@@ -17,7 +17,6 @@
         :class="[
           'shadow-lg',
           mode ? 'bg-veryLightGrayColor' : 'bg-darkBlueColor',
-          'hover:bg-darkBlueColor',
           'text-2xl',
           'py-2',
           'px-8',

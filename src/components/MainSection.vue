@@ -11,7 +11,7 @@
       <div
         v-loading="loading"
         element-loading-text="Loading..."
-        class="rounded overflow-hidden shadow-lg hover:shadow-xl"
+        class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
         v-for="country in filteredSearch"
         :key="country.name"
       >
@@ -24,7 +24,14 @@
             :alt="[country.name]"
           />
         </router-link>
-        <div class="px-6 py-8 bg-darkBlueColor">
+        <div
+          :class="[
+            'px-6',
+            'py-8',
+            mode ? 'bg-whiteColor' : 'bg-darkBlueColor',
+            mode ? 'text-veryDarkBlueDarkColor' : 'text-whiteColor',
+          ]"
+        >
           <div class="font-extrabold text-2xl mb-2 py-5">
             {{ country.name }}
           </div>
@@ -48,6 +55,7 @@
 
 <script>
 import axios from "axios";
+import EventBus from "./../event-bus";
 import Nprogress from "nprogress";
 import SearchBoxes from "@/components/SearchBoxes";
 export default {
@@ -57,10 +65,16 @@ export default {
   },
   data() {
     return {
+      mode: true,
       countries: [],
       searchedCountry: "",
       loading: false,
     };
+  },
+  mounted() {
+    EventBus.$on("currentMode", (value) => {
+      this.mode = value;
+    });
   },
   methods: {
     listenToSearch(value) {
